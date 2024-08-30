@@ -1,14 +1,13 @@
 project:
-  type: website
+  type: book
   output-dir: docs
 
-website:
-  title: "EMIW_EKI"
-  navbar:
-    left:
-      - href: index.qmd
-        text: Home
-      - about.qmd
+book:
+  title: "Parallel Ensemble-Kalman-Inversion"
+  author: Ralph-Uwe Börner
+  date: "today"
+  chapters: 
+    - index.qmd
 
 format:
   html:
