@@ -2,6 +2,6 @@
 title: "Parallel EKI"
 ---
 
-This is a Quarto website.
+This is a Quarto website. Does it update?
 
 To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
