@@ -9,8 +9,9 @@ book:
   date: "today"
   chapters: 
     - index.qmd
-    - part: "Introdution"
     - part: "The EKI method"
+      chapters: 
+        - eki.qmd
     - part: "Gaussian Random Fields"
     - part: "Numerical experiments"
     - part: "References"

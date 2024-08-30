@@ -1,0 +1,60 @@
+---
+title: "Theoretical Background"
+---
+
+The EKI method is characterized by the following **key features**:
+
+::: {.callout}
+- **Derivative-Free Optimization**: EKI does not require the calculation of derivatives, making it suitable for complex or black-box forward models.
+- **Ensemble-Based Approach**: The method uses a collection of ensemble members to explore the solution space, offering robustness against noise and uncertainties.
+- **Embarrassingly Parallelizable**: The independent calculation of forward models and model updates for each ensemble member allows for straightforward parallelization, significantly enhancing computational efficiency.
+- **Stable Convergence**: EKI converges stably to an approximate solution that accounts for the noise level in the data.
+- **Flexibility in Parameter Space**: The method can handle large and complex parameter spaces, making it practical and easy to implement for various applications.
+:::
+
+The Ensemble-Kalman-Inversion method addresses inverse problems, where the goal is to estimate model parameters $\mathbf{m}  \in \mathbb R^M$ that best explain observed data $\mathbf{d} \in \mathbb C^N$.
+The forward problem is formulated as
+
+$$
+\begin{equation}
+\mathbf{d} = G(\mathbf{m}) + \boldsymbol{\epsilon},
+\end{equation}
+$$ {#eq-forward}
+
+where $G(\mathbf{m}): \mathbb R^M \mapsto \mathbb C^N$ is the forward operator mapping the model parameters $\mathbf{m}$ to the data space, and  $\boldsymbol{\epsilon} \in \mathbb C^N$ represents observational noise.
+
+## The EKI Algorithm
+
+The EKI **algorithm** can be split into the following steps:
+
+**Initialization**
+Draw $\{ m_{n}^{(j)}\}_{j=1}^J$ ensemble members from a prior distribution.
+Set $\rho \in (0,1)$ and $\tau > 1/\rho$.
+Then for $n=0,1 \dots$
+
+**Prediction**
+Evaluate $w_n^{(j)} = G(m_n^{(j)})$ and calculate the mean value $\overline{w}_n$.
+
+**Termination**
+If $||\Gamma^{-1/2}(\mathbf d - \overline w_n) || \le \tau \eta$, terminate and output the ensemble mean $\overline m_n$ as solution.
+
+**Analysis**
+At each iteration, an ensemble of perturbed data $\{ y_{n}^{(j)}\}_{j=1}^J$ is generated with additional noise $y_n^{(j)} = d + \eta$.
+
+The update at iteration $n$ is given by
+
+$$
+m_{n+1}^{(j)} = m_{n}^{(j)} + C_{n}^{mw} \left(  
+C_{n}^{ww} + \alpha_{n}\Gamma
+\right) ^{-1}
+( y_{n}^{(j)} - w_{n}^{(j)} )
+$$
+where
+$$
+\begin{align}
+C_{n}^{ww}(\cdot) & = \frac{1}{J-1} \sum_{j=1}^{J} \left( G(m_{n}^{(j)}) - \overline{w}_{n} \right) \left< G(m_{n}^{(j)}) - \overline{w}_{n}, \cdot \right>_{Y} \\
+C_{n}^{mw}(\cdot) & = \frac{1}{J-1} \sum_{j=1}^{J} \left( m_{n}^{(j)} - \overline{m}_{n} \right) \left< G(m_{n}^{(j)}) - \overline{w}_{n}, \cdot \right>_{Y}
+\end{align}
+$$
+are **covariance operators**, $G(m_n^{(j)})$ is the **forward operator** applied to the $j$-th ensemble member at iteration $n$, and  $\Gamma$ is an operator that encodes the measurement precision.
+
