@@ -3,12 +3,10 @@ title: "Introduction"
 bibliography: references.bib
 ---
 
-This is a Quarto website. Does it update? Now with a different theme.
+TEST!!
 
 $$
 \overline{m}_n
 $$
-
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
 
 @iglesias2013
