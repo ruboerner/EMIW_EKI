@@ -4,16 +4,46 @@ project:
 
 book:
   title: "Parallel Ensemble-Kalman-Inversion"
+  subtitle: "Supplementary material on my EMIW poster"
   author: Ralph-Uwe Börner
   date: "today"
   chapters: 
     - index.qmd
+    - part: "Introdution"
+    - part: "The EKI method"
+    - part: "Gaussian Random Fields"
+    - part: "Numerical experiments"
+    - part: "References"
+      chapters: 
+        - references.qmd
+    
+bibliography: references.bib
+csl: https://www.zotero.org/styles/geophysical-journal-international
 
 format:
   html:
-    theme: simplex
+    theme: lumen
     css: styles.css
     toc: true
+    crossref:
+      chapters: true
+      eq-prefix: ""
+    code-fold: true
+    code-summary: "Show the code"
+    html-math-method: mathjax
+    include-in-header:
+      - text: |
+          <script>
+          window.MathJax = {
+            loader: {
+              load: ['[tex]/physics']
+            },
+            tex: {
+              packages: {'[+]': ['physics']}
+            }
+          };
+          </script>
+
 
 editor: visual
 
