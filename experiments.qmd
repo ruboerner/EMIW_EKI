@@ -1,0 +1,20 @@
+---
+title: Numerical experiments
+---
+
+## Large correlation length
+![$\lambda=5000$, $\nu=3.0$](images/model_anim_050.gif)
+
+
+## Small correlation length
+![$\lambda=1000$, $\nu=3.0$](images/model_anim_051.gif)
+
+## Moderate correlation length
+![$\lambda=3000$, $\nu=3.0$](images/model_anim_052.gif)
+
+## Reduced smoothness
+![$\lambda=3000$, $\nu=2.0$](images/model_anim_053.gif)
+
+## Increased smoothness
+![$\lambda=3000$, $\nu=2.5$](images/model_anim_054.gif)
+

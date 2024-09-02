@@ -14,6 +14,8 @@ book:
         - eki.qmd
     - part: "Gaussian Random Fields"
     - part: "Numerical experiments"
+      chapters:
+        - experiments.qmd
     - part: "References"
       chapters: 
         - references.qmd
