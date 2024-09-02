@@ -23,12 +23,12 @@
   {
     "objectID": "grf.html",
     "href": "grf.html",
-    "title": "3  Gaussian Random Fields",
+    "title": "3  The Matérn Covariance Function",
     "section": "",
-    "text": "\\[\nC(x,y) = \\sigma  \\frac{2^{1-\\nu}}{\\Gamma(\\nu)} \\left( \\frac{\\rho}{\\lambda} \\right)^{\\nu}K_{\\nu} \\left( \\frac{\\rho}{\\lambda} \\right)\n\\tag{3.1}\\]",
+    "text": "The Matérn covariance between measurements taken at two points separated by \\(\\rho = \\|x - y\\|\\) distance units is given by \\[\nC(x,y) = \\sigma  \\frac{2^{1-\\nu}}{\\Gamma(\\nu)} \\left( \\frac{\\rho}{\\lambda} \\right)^{\\nu}K_{\\nu} \\left( \\frac{\\rho}{\\lambda} \\right) ,\n\\tag{3.1}\\] where \\(\\Gamma\\) is the gamma function, \\(K_{\\nu }\\) is the modified Bessel function of the second kind, \\(\\lambda\\) (correlation length) and \\(\\nu\\) (smoothness) are positive parameters of the covariance.\nFigure 3.1 gives examples of the Matérn function for different values of correlation length and smoothness.\n\n\n\n\n\n\nFigure 3.1: Examples of the Matérn Covariance Function",
     "crumbs": [
       "Gaussian Random Fields",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Gaussian Random Fields</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>The Matérn Covariance Function</span>"
     ]
   },
   {

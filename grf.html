@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>3&nbsp; Gaussian Random Fields – Parallel Ensemble-Kalman-Inversion</title>
+<title>3&nbsp; The Matérn Covariance Function – Parallel Ensemble-Kalman-Inversion</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -121,7 +121,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./grf.html">Gaussian Random Fields</a></li><li class="breadcrumb-item"><a href="./grf.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Gaussian Random Fields</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./grf.html">Gaussian Random Fields</a></li><li class="breadcrumb-item"><a href="./grf.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">The Matérn Covariance Function</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -181,7 +181,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./grf.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Gaussian Random Fields</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">The Matérn Covariance Function</span></span></a>
   </div>
 </li>
       </ul>
@@ -231,9 +231,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./grf.html">Gaussian Random Fields</a></li><li class="breadcrumb-item"><a href="./grf.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Gaussian Random Fields</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./grf.html">Gaussian Random Fields</a></li><li class="breadcrumb-item"><a href="./grf.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">The Matérn Covariance Function</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Gaussian Random Fields</span></h1>
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">The Matérn Covariance Function</span></h1>
 </div>
 
 
@@ -250,9 +250,20 @@ window.Quarto = {
 </header>
 
 
-<p><span id="eq-matern"><span class="math display">\[
-C(x,y) = \sigma  \frac{2^{1-\nu}}{\Gamma(\nu)} \left( \frac{\rho}{\lambda} \right)^{\nu}K_{\nu} \left( \frac{\rho}{\lambda} \right)
-\tag{3.1}\]</span></span></p>
+<p>The Matérn covariance between measurements taken at two points separated by <span class="math inline">\(\rho = \|x - y\|\)</span> distance units is given by <span id="eq-matern"><span class="math display">\[
+C(x,y) = \sigma  \frac{2^{1-\nu}}{\Gamma(\nu)} \left( \frac{\rho}{\lambda} \right)^{\nu}K_{\nu} \left( \frac{\rho}{\lambda} \right) ,
+\tag{3.1}\]</span></span> where <span class="math inline">\(\Gamma\)</span> is the gamma function, <span class="math inline">\(K_{\nu }\)</span> is the modified Bessel function of the second kind, <span class="math inline">\(\lambda\)</span> (correlation length) and <span class="math inline">\(\nu\)</span> (smoothness) are positive parameters of the covariance.</p>
+<p><a href="#fig-grfraster" class="quarto-xref">Figure&nbsp;<span>3.1</span></a> gives examples of the Matérn function for different values of correlation length and smoothness.</p>
+<div id="fig-grfraster" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-grfraster-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/matern.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-grfraster-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3.1: Examples of the Matérn Covariance Function
+</figcaption>
+</figure>
+</div>
 
 
 
