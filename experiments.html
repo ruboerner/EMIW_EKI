@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>2&nbsp; Theoretical Background – Parallel Ensemble-Kalman-Inversion</title>
+<title>3&nbsp; Numerical experiments – Parallel Ensemble-Kalman-Inversion</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./experiments.html" rel="next">
-<link href="./index.html" rel="prev">
+<link href="./references.html" rel="next">
+<link href="./eki.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -121,7 +121,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./eki.html">The EKI method</a></li><li class="breadcrumb-item"><a href="./eki.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Theoretical Background</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./experiments.html">Numerical experiments</a></li><li class="breadcrumb-item"><a href="./experiments.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Numerical experiments</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -163,7 +163,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./eki.html" class="sidebar-item-text sidebar-link active">
+  <a href="./eki.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Theoretical Background</span></span></a>
   </div>
 </li>
@@ -184,7 +184,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./experiments.html" class="sidebar-item-text sidebar-link">
+  <a href="./experiments.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Numerical experiments</span></span></a>
   </div>
 </li>
@@ -217,16 +217,20 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#the-eki-algorithm" id="toc-the-eki-algorithm" class="nav-link active" data-scroll-target="#the-eki-algorithm"><span class="header-section-number">2.1</span> The EKI Algorithm</a></li>
+  <li><a href="#large-correlation-length" id="toc-large-correlation-length" class="nav-link active" data-scroll-target="#large-correlation-length"><span class="header-section-number">3.1</span> Large correlation length</a></li>
+  <li><a href="#small-correlation-length" id="toc-small-correlation-length" class="nav-link" data-scroll-target="#small-correlation-length"><span class="header-section-number">3.2</span> Small correlation length</a></li>
+  <li><a href="#moderate-correlation-length" id="toc-moderate-correlation-length" class="nav-link" data-scroll-target="#moderate-correlation-length"><span class="header-section-number">3.3</span> Moderate correlation length</a></li>
+  <li><a href="#reduced-smoothness" id="toc-reduced-smoothness" class="nav-link" data-scroll-target="#reduced-smoothness"><span class="header-section-number">3.4</span> Reduced smoothness</a></li>
+  <li><a href="#increased-smoothness" id="toc-increased-smoothness" class="nav-link" data-scroll-target="#increased-smoothness"><span class="header-section-number">3.5</span> Increased smoothness</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./eki.html">The EKI method</a></li><li class="breadcrumb-item"><a href="./eki.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Theoretical Background</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./experiments.html">Numerical experiments</a></li><li class="breadcrumb-item"><a href="./experiments.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Numerical experiments</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Theoretical Background</span></h1>
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Numerical experiments</span></h1>
 </div>
 
 
@@ -243,49 +247,50 @@ window.Quarto = {
 </header>
 
 
-<p>The EKI method is characterized by the following <strong>key features</strong>:</p>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
+<section id="large-correlation-length" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="large-correlation-length"><span class="header-section-number">3.1</span> Large correlation length</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/model_anim_050.gif" class="img-fluid figure-img"></p>
+<figcaption><span class="math inline">\(\lambda=5000\)</span>, <span class="math inline">\(\nu=3.0\)</span></figcaption>
+</figure>
 </div>
-<div class="callout-body-container">
-<ul>
-<li><strong>Derivative-Free Optimization</strong>: EKI does not require the calculation of derivatives, making it suitable for complex or black-box forward models.</li>
-<li><strong>Ensemble-Based Approach</strong>: The method uses a collection of ensemble members to explore the solution space, offering robustness against noise and uncertainties.</li>
-<li><strong>Embarrassingly Parallelizable</strong>: The independent calculation of forward models and model updates for each ensemble member allows for straightforward parallelization, significantly enhancing computational efficiency.</li>
-<li><strong>Stable Convergence</strong>: EKI converges stably to an approximate solution that accounts for the noise level in the data.</li>
-<li><strong>Flexibility in Parameter Space</strong>: The method can handle large and complex parameter spaces, making it practical and easy to implement for various applications.</li>
-</ul>
+</section>
+<section id="small-correlation-length" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="small-correlation-length"><span class="header-section-number">3.2</span> Small correlation length</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/model_anim_051.gif" class="img-fluid figure-img"></p>
+<figcaption><span class="math inline">\(\lambda=1000\)</span>, <span class="math inline">\(\nu=3.0\)</span></figcaption>
+</figure>
 </div>
+</section>
+<section id="moderate-correlation-length" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="moderate-correlation-length"><span class="header-section-number">3.3</span> Moderate correlation length</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/model_anim_052.gif" class="img-fluid figure-img"></p>
+<figcaption><span class="math inline">\(\lambda=3000\)</span>, <span class="math inline">\(\nu=3.0\)</span></figcaption>
+</figure>
 </div>
+</section>
+<section id="reduced-smoothness" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="reduced-smoothness"><span class="header-section-number">3.4</span> Reduced smoothness</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/model_anim_053.gif" class="img-fluid figure-img"></p>
+<figcaption><span class="math inline">\(\lambda=3000\)</span>, <span class="math inline">\(\nu=2.0\)</span></figcaption>
+</figure>
 </div>
-<p>The Ensemble-Kalman-Inversion method addresses inverse problems, where the goal is to estimate model parameters <span class="math inline">\(\mathbf{m}  \in \mathbb R^M\)</span> that best explain observed data <span class="math inline">\(\mathbf{d} \in \mathbb C^N\)</span>. The forward problem is formulated as</p>
-<p><span id="eq-forward"><span class="math display">\[
-\begin{equation}
-\mathbf{d} = G(\mathbf{m}) + \boldsymbol{\epsilon},
-\end{equation}
-\tag{2.1}\]</span></span></p>
-<p>where <span class="math inline">\(G(\mathbf{m}): \mathbb R^M \mapsto \mathbb C^N\)</span> is the forward operator mapping the model parameters <span class="math inline">\(\mathbf{m}\)</span> to the data space, and <span class="math inline">\(\boldsymbol{\epsilon} \in \mathbb C^N\)</span> represents observational noise.</p>
-<section id="the-eki-algorithm" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="the-eki-algorithm"><span class="header-section-number">2.1</span> The EKI Algorithm</h2>
-<p>The EKI <strong>algorithm</strong> can be split into the following steps:</p>
-<p><strong>Initialization</strong> Draw <span class="math inline">\(\{ m_{n}^{(j)}\}_{j=1}^J\)</span> ensemble members from a prior distribution. Set <span class="math inline">\(\rho \in (0,1)\)</span> and <span class="math inline">\(\tau &gt; 1/\rho\)</span>. Then for <span class="math inline">\(n=0,1 \dots\)</span></p>
-<p><strong>Prediction</strong> Evaluate <span class="math inline">\(w_n^{(j)} = G(m_n^{(j)})\)</span> and calculate the mean value <span class="math inline">\(\overline{w}_n\)</span>.</p>
-<p><strong>Termination</strong> If <span class="math inline">\(||\Gamma^{-1/2}(\mathbf d - \overline w_n) || \le \tau \eta\)</span>, terminate and output the ensemble mean <span class="math inline">\(\overline m_n\)</span> as solution.</p>
-<p><strong>Analysis</strong> At each iteration, an ensemble of perturbed data <span class="math inline">\(\{ y_{n}^{(j)}\}_{j=1}^J\)</span> is generated with additional noise <span class="math inline">\(y_n^{(j)} = d + \eta\)</span>.</p>
-<p>The update at iteration <span class="math inline">\(n\)</span> is given by</p>
-<p><span class="math display">\[
-m_{n+1}^{(j)} = m_{n}^{(j)} + C_{n}^{mw} \left(  
-C_{n}^{ww} + \alpha_{n}\Gamma
-\right) ^{-1}
-( y_{n}^{(j)} - w_{n}^{(j)} )
-\]</span> where <span class="math display">\[
-\begin{align}
-C_{n}^{ww}(\cdot) &amp; = \frac{1}{J-1} \sum_{j=1}^{J} \left( G(m_{n}^{(j)}) - \overline{w}_{n} \right) \left&lt; G(m_{n}^{(j)}) - \overline{w}_{n}, \cdot \right&gt;_{Y} \\
-C_{n}^{mw}(\cdot) &amp; = \frac{1}{J-1} \sum_{j=1}^{J} \left( m_{n}^{(j)} - \overline{m}_{n} \right) \left&lt; G(m_{n}^{(j)}) - \overline{w}_{n}, \cdot \right&gt;_{Y}
-\end{align}
-\]</span> are <strong>covariance operators</strong>, <span class="math inline">\(G(m_n^{(j)})\)</span> is the <strong>forward operator</strong> applied to the <span class="math inline">\(j\)</span>-th ensemble member at iteration <span class="math inline">\(n\)</span>, and <span class="math inline">\(\Gamma\)</span> is an operator that encodes the measurement precision.</p>
+</section>
+<section id="increased-smoothness" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="increased-smoothness"><span class="header-section-number">3.5</span> Increased smoothness</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/model_anim_054.gif" class="img-fluid figure-img"></p>
+<figcaption><span class="math inline">\(\lambda=3000\)</span>, <span class="math inline">\(\nu=2.5\)</span></figcaption>
+</figure>
+</div>
 
 
 </section>
@@ -713,13 +718,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./index.html" class="pagination-link" aria-label="Introduction">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span>
+      <a href="./eki.html" class="pagination-link" aria-label="Theoretical Background">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Theoretical Background</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./experiments.html" class="pagination-link" aria-label="Numerical experiments">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Numerical experiments</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./references.html" class="pagination-link" aria-label="References">
+        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
