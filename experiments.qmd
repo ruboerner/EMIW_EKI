@@ -13,19 +13,23 @@ A detailed view into the resulting model is depicted in @fig-true. Note that the
 
 In the following sections, we demonstrate the impact of the correlation length $\lambda$ and the smoothness parameter $\nu$ (as defined in @eq-matern) on the inversion results.
 
+All images represent the sequence of Kalman ensemble means as returned from a single iteration step.
+
+The animations display the model updates along with the corresponding normalized data misfit for each iteration.
+
 ## Large correlation length
-![$\lambda=5000$, $\nu=3.0$](images/model_anim_050.gif){#fig-050}
+![$\lambda=5000$ m, $\nu=3.0$](images/model_anim_050.gif){#fig-050}
 
 
 ## Small correlation length
-![$\lambda=1000$, $\nu=3.0$](images/model_anim_051.gif){#fig-051}
+![$\lambda=1000$ m, $\nu=3.0$](images/model_anim_051.gif){#fig-051}
 
 ## Moderate correlation length
-![$\lambda=3000$, $\nu=3.0$](images/model_anim_052.gif){#fig-052}
+![$\lambda=3000$ m, $\nu=3.0$](images/model_anim_052.gif){#fig-052}
 
 ## Reduced smoothness
-![$\lambda=3000$, $\nu=2.0$](images/model_anim_053.gif){#fig-053}
+![$\lambda=3000$ m, $\nu=2.0$](images/model_anim_053.gif){#fig-053}
 
 ## Increased smoothness
-![$\lambda=3000$, $\nu=2.5$](images/model_anim_054.gif){#fig-054}
+![$\lambda=3000$ m, $\nu=2.5$](images/model_anim_054.gif){#fig-054}
 
