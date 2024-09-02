@@ -1,7 +1,13 @@
 ---
-title: Gaussian Random Fields
+title: The Matérn Covariance Function
 ---
-
+The Matérn covariance between measurements taken at two points separated by $\rho = \|x - y\|$ distance units is given by
 $$
-C(x,y) = \sigma  \frac{2^{1-\nu}}{\Gamma(\nu)} \left( \frac{\rho}{\lambda} \right)^{\nu}K_{\nu} \left( \frac{\rho}{\lambda} \right) 
+C(x,y) = \sigma  \frac{2^{1-\nu}}{\Gamma(\nu)} \left( \frac{\rho}{\lambda} \right)^{\nu}K_{\nu} \left( \frac{\rho}{\lambda} \right) ,
 $$ {#eq-matern}
+where  $\Gamma$ is the gamma function, $K_{\nu }$ is the modified Bessel function of the second kind, $\lambda$ (correlation length) and 
+$\nu$ (smoothness) are positive parameters of the covariance.
+
+@fig-grfraster gives examples of the Matérn function for different values of correlation length and smoothness.
+
+![Examples of the Matérn Covariance Function](images/matern.png){#fig-grfraster}
