@@ -1,0 +1,7 @@
+---
+title: Gaussian Random Fields
+---
+
+$$
+C(x,y) = \sigma  \frac{2^{1-\nu}}{\Gamma(\nu)} \left( \frac{\rho}{\lambda} \right)^{\nu}K_{\nu} \left( \frac{\rho}{\lambda} \right) 
+$$ {#eq-matern}

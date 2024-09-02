@@ -2,19 +2,30 @@
 title: Numerical experiments
 ---
 
+
+For the numerical experiments, we consider a half-space with an embedded conductive anomaly generated from a realization of a Matérn-type Gaussian Random Field (GRF).
+
+First, a GRF realization is computed on a pre-defined, sufficiently dense tensor-product grid. Next, the resulting grid values are mapped onto a zeroth-order finite element (FE) space, enabling straightforward evaluation during a higher-order FE assembly step. By staying within the FE framework, we can seamlessly interpolate this continuous function onto the desired piecewise constant parameter of the partial differential equation (PDE).
+
+A detailed view into the resulting model is depicted in @fig-true. Note that the actual computational domain extends to $\pm 30$ km in both vertical and horizontal directions.
+
+![Detailed view of the true model.](images/smallmodel_grf.png){#fig-true}
+
+In the following sections, we demonstrate the impact of the correlation length $\lambda$ and the smoothness parameter $\nu$ (as defined in @eq-matern) on the inversion results.
+
 ## Large correlation length
-![$\lambda=5000$, $\nu=3.0$](images/model_anim_050.gif)
+![$\lambda=5000$, $\nu=3.0$](images/model_anim_050.gif){#fig-050}
 
 
 ## Small correlation length
-![$\lambda=1000$, $\nu=3.0$](images/model_anim_051.gif)
+![$\lambda=1000$, $\nu=3.0$](images/model_anim_051.gif){#fig-051}
 
 ## Moderate correlation length
-![$\lambda=3000$, $\nu=3.0$](images/model_anim_052.gif)
+![$\lambda=3000$, $\nu=3.0$](images/model_anim_052.gif){#fig-052}
 
 ## Reduced smoothness
-![$\lambda=3000$, $\nu=2.0$](images/model_anim_053.gif)
+![$\lambda=3000$, $\nu=2.0$](images/model_anim_053.gif){#fig-053}
 
 ## Increased smoothness
-![$\lambda=3000$, $\nu=2.5$](images/model_anim_054.gif)
+![$\lambda=3000$, $\nu=2.5$](images/model_anim_054.gif){#fig-054}
 

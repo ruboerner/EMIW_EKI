@@ -13,6 +13,8 @@ book:
       chapters: 
         - eki.qmd
     - part: "Gaussian Random Fields"
+      chapters: 
+        - grf.qmd
     - part: "Numerical experiments"
       chapters:
         - experiments.qmd
