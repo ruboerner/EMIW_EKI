@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>4&nbsp; Numerical experiments – Parallel Ensemble-Kalman-Inversion</title>
+<title>3&nbsp; Gaussian Random Fields – Parallel Ensemble-Kalman-Inversion</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./references.html" rel="next">
-<link href="./grf.html" rel="prev">
+<link href="./experiments.html" rel="next">
+<link href="./eki.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -121,7 +121,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./experiments.html">Numerical experiments</a></li><li class="breadcrumb-item"><a href="./experiments.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Numerical experiments</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./grf.html">Gaussian Random Fields</a></li><li class="breadcrumb-item"><a href="./grf.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Gaussian Random Fields</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -180,7 +180,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./grf.html" class="sidebar-item-text sidebar-link">
+  <a href="./grf.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Gaussian Random Fields</span></span></a>
   </div>
 </li>
@@ -197,7 +197,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./experiments.html" class="sidebar-item-text sidebar-link active">
+  <a href="./experiments.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Numerical experiments</span></span></a>
   </div>
 </li>
@@ -225,25 +225,15 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#large-correlation-length" id="toc-large-correlation-length" class="nav-link active" data-scroll-target="#large-correlation-length"><span class="header-section-number">4.1</span> Large correlation length</a></li>
-  <li><a href="#small-correlation-length" id="toc-small-correlation-length" class="nav-link" data-scroll-target="#small-correlation-length"><span class="header-section-number">4.2</span> Small correlation length</a></li>
-  <li><a href="#moderate-correlation-length" id="toc-moderate-correlation-length" class="nav-link" data-scroll-target="#moderate-correlation-length"><span class="header-section-number">4.3</span> Moderate correlation length</a></li>
-  <li><a href="#reduced-smoothness" id="toc-reduced-smoothness" class="nav-link" data-scroll-target="#reduced-smoothness"><span class="header-section-number">4.4</span> Reduced smoothness</a></li>
-  <li><a href="#increased-smoothness" id="toc-increased-smoothness" class="nav-link" data-scroll-target="#increased-smoothness"><span class="header-section-number">4.5</span> Increased smoothness</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./experiments.html">Numerical experiments</a></li><li class="breadcrumb-item"><a href="./experiments.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Numerical experiments</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./grf.html">Gaussian Random Fields</a></li><li class="breadcrumb-item"><a href="./grf.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Gaussian Random Fields</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Numerical experiments</span></h1>
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Gaussian Random Fields</span></h1>
 </div>
 
 
@@ -260,87 +250,11 @@ window.Quarto = {
 </header>
 
 
-<p>For the numerical experiments, we consider a half-space with an embedded conductive anomaly generated from a realization of a Matérn-type Gaussian Random Field (GRF).</p>
-<p>First, a GRF realization is computed on a pre-defined, sufficiently dense tensor-product grid. Next, the resulting grid values are mapped onto a zeroth-order finite element (FE) space, enabling straightforward evaluation during a higher-order FE assembly step. By staying within the FE framework, we can seamlessly interpolate this continuous function onto the desired piecewise constant parameter of the partial differential equation (PDE).</p>
-<p>A detailed view into the resulting model is depicted in <a href="#fig-true" class="quarto-xref">Figure&nbsp;<span>4.1</span></a>. Note that the actual computational domain extends to <span class="math inline">\(\pm 30\)</span> km in both vertical and horizontal directions.</p>
-<div id="fig-true" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-true-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/smallmodel_grf.png" class="img-fluid figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-true-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4.1: Detailed view of the true model.
-</figcaption>
-</figure>
-</div>
-<p>In the following sections, we demonstrate the impact of the correlation length <span class="math inline">\(\lambda\)</span> and the smoothness parameter <span class="math inline">\(\nu\)</span> (as defined in <a href="grf.html#eq-matern" class="quarto-xref"><span>3.1</span></a>) on the inversion results.</p>
-<section id="large-correlation-length" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="large-correlation-length"><span class="header-section-number">4.1</span> Large correlation length</h2>
-<div id="fig-050" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-050-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/model_anim_050.gif" class="img-fluid figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-050-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4.2: <span class="math inline">\(\lambda=5000\)</span>, <span class="math inline">\(\nu=3.0\)</span>
-</figcaption>
-</figure>
-</div>
-</section>
-<section id="small-correlation-length" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="small-correlation-length"><span class="header-section-number">4.2</span> Small correlation length</h2>
-<div id="fig-051" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-051-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/model_anim_051.gif" class="img-fluid figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-051-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4.3: <span class="math inline">\(\lambda=1000\)</span>, <span class="math inline">\(\nu=3.0\)</span>
-</figcaption>
-</figure>
-</div>
-</section>
-<section id="moderate-correlation-length" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="moderate-correlation-length"><span class="header-section-number">4.3</span> Moderate correlation length</h2>
-<div id="fig-052" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-052-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/model_anim_052.gif" class="img-fluid figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-052-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4.4: <span class="math inline">\(\lambda=3000\)</span>, <span class="math inline">\(\nu=3.0\)</span>
-</figcaption>
-</figure>
-</div>
-</section>
-<section id="reduced-smoothness" class="level2" data-number="4.4">
-<h2 data-number="4.4" class="anchored" data-anchor-id="reduced-smoothness"><span class="header-section-number">4.4</span> Reduced smoothness</h2>
-<div id="fig-053" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-053-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/model_anim_053.gif" class="img-fluid figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-053-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4.5: <span class="math inline">\(\lambda=3000\)</span>, <span class="math inline">\(\nu=2.0\)</span>
-</figcaption>
-</figure>
-</div>
-</section>
-<section id="increased-smoothness" class="level2" data-number="4.5">
-<h2 data-number="4.5" class="anchored" data-anchor-id="increased-smoothness"><span class="header-section-number">4.5</span> Increased smoothness</h2>
-<div id="fig-054" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-054-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/model_anim_054.gif" class="img-fluid figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-054-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4.6: <span class="math inline">\(\lambda=3000\)</span>, <span class="math inline">\(\nu=2.5\)</span>
-</figcaption>
-</figure>
-</div>
+<p><span id="eq-matern"><span class="math display">\[
+C(x,y) = \sigma  \frac{2^{1-\nu}}{\Gamma(\nu)} \left( \frac{\rho}{\lambda} \right)^{\nu}K_{\nu} \left( \frac{\rho}{\lambda} \right)
+\tag{3.1}\]</span></span></p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -765,13 +679,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./grf.html" class="pagination-link" aria-label="Gaussian Random Fields">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Gaussian Random Fields</span></span>
+      <a href="./eki.html" class="pagination-link" aria-label="Theoretical Background">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Theoretical Background</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./references.html" class="pagination-link" aria-label="References">
-        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./experiments.html" class="pagination-link" aria-label="Numerical experiments">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Numerical experiments</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
