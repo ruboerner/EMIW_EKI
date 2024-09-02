@@ -47,7 +47,7 @@
     "href": "experiments.html#large-correlation-length",
     "title": "4  Numerical experiments",
     "section": "",
-    "text": "Figure 4.2: \\(\\lambda=5000\\), \\(\\nu=3.0\\)",
+    "text": "Figure 4.2: \\(\\lambda=5000\\) m, \\(\\nu=3.0\\)",
     "crumbs": [
       "Numerical experiments",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Numerical experiments</span>"
@@ -58,7 +58,7 @@
     "href": "experiments.html#small-correlation-length",
     "title": "4  Numerical experiments",
     "section": "4.2 Small correlation length",
-    "text": "4.2 Small correlation length\n\n\n\n\n\n\nFigure 4.3: \\(\\lambda=1000\\), \\(\\nu=3.0\\)",
+    "text": "4.2 Small correlation length\n\n\n\n\n\n\nFigure 4.3: \\(\\lambda=1000\\) m, \\(\\nu=3.0\\)",
     "crumbs": [
       "Numerical experiments",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Numerical experiments</span>"
@@ -69,7 +69,7 @@
     "href": "experiments.html#moderate-correlation-length",
     "title": "4  Numerical experiments",
     "section": "4.3 Moderate correlation length",
-    "text": "4.3 Moderate correlation length\n\n\n\n\n\n\nFigure 4.4: \\(\\lambda=3000\\), \\(\\nu=3.0\\)",
+    "text": "4.3 Moderate correlation length\n\n\n\n\n\n\nFigure 4.4: \\(\\lambda=3000\\) m, \\(\\nu=3.0\\)",
     "crumbs": [
       "Numerical experiments",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Numerical experiments</span>"
@@ -80,7 +80,7 @@
     "href": "experiments.html#reduced-smoothness",
     "title": "4  Numerical experiments",
     "section": "4.4 Reduced smoothness",
-    "text": "4.4 Reduced smoothness\n\n\n\n\n\n\nFigure 4.5: \\(\\lambda=3000\\), \\(\\nu=2.0\\)",
+    "text": "4.4 Reduced smoothness\n\n\n\n\n\n\nFigure 4.5: \\(\\lambda=3000\\) m, \\(\\nu=2.0\\)",
     "crumbs": [
       "Numerical experiments",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Numerical experiments</span>"
@@ -91,7 +91,7 @@
     "href": "experiments.html#increased-smoothness",
     "title": "4  Numerical experiments",
     "section": "4.5 Increased smoothness",
-    "text": "4.5 Increased smoothness\n\n\n\n\n\n\nFigure 4.6: \\(\\lambda=3000\\), \\(\\nu=2.5\\)",
+    "text": "4.5 Increased smoothness\n\n\n\n\n\n\nFigure 4.6: \\(\\lambda=3000\\) m, \\(\\nu=2.5\\)",
     "crumbs": [
       "Numerical experiments",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Numerical experiments</span>"
