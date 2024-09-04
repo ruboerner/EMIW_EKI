@@ -1,5 +1,5 @@
 ---
-title: "Theoretical Background"
+title: "Fundamentals"
 ---
 
 The EKI method is characterized by the following **key features**:
