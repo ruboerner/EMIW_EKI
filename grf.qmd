@@ -11,3 +11,9 @@ $\nu$ (smoothness) are positive parameters of the covariance.
 @fig-grfraster gives examples of the Matérn function for different values of correlation length and smoothness.
 
 ![Examples of the Matérn Covariance Function](images/matern.png){#fig-grfraster}
+
+When the GRF is evaluated to generate the prior ensemble, the correlaton length and smoothness parameters are being kept fixed.
+
+We note further, that the choice of the Matérn parameters should refelct the a priori knowledge about the spatial features of the model.
+
+Finally, we emphasize the **Invariance Subspace** property which states, that the EKI results tend to converge towards a model which lies in the span of the initial EKI ensemble.
