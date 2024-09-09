@@ -285,20 +285,21 @@ window.Quarto = {
 <p>The EKI <strong>algorithm</strong> can be split into the following steps:</p>
 <p><strong>Initialization</strong> Draw <span class="math inline">\(\{ m_{n}^{(j)}\}_{j=1}^J\)</span> ensemble members from a prior distribution. Set <span class="math inline">\(\rho \in (0,1)\)</span> and <span class="math inline">\(\tau &gt; 1/\rho\)</span>. Then for <span class="math inline">\(n=0,1 \dots\)</span></p>
 <p><strong>Prediction</strong> Evaluate <span class="math inline">\(w_n^{(j)} = G(m_n^{(j)})\)</span> and calculate the mean value <span class="math inline">\(\overline{w}_n\)</span>.</p>
-<p><strong>Termination</strong> If <span class="math inline">\(||\Gamma^{-1/2}(\mathbf d - \overline w_n) || \le \tau \eta\)</span>, terminate and output the ensemble mean <span class="math inline">\(\overline m_n\)</span> as solution.</p>
+<p><strong>Termination</strong> If <span class="math inline">\(||\Gamma^{-1/2}(\mathbf d - \overline w_n) || \le \tau \eta\)</span>, terminate and output the ensemble mean <span class="math inline">\(\overline m_n\)</span> as solution. <span class="math inline">\(\Gamma\)</span> encodes the measurement precision so that the misfit is weighted.</p>
 <p><strong>Analysis</strong> At each iteration, an ensemble of perturbed data <span class="math inline">\(\{ y_{n}^{(j)}\}_{j=1}^J\)</span> is generated with additional noise <span class="math inline">\(y_n^{(j)} = d + \eta\)</span>.</p>
 <p>The update at iteration <span class="math inline">\(n\)</span> is given by</p>
-<p><span class="math display">\[
+<p><span id="eq-kalmanupdate"><span class="math display">\[
 m_{n+1}^{(j)} = m_{n}^{(j)} + C_{n}^{mw} \left(  
 C_{n}^{ww} + \alpha_{n}\Gamma
 \right) ^{-1}
 ( y_{n}^{(j)} - w_{n}^{(j)} )
-\]</span> where <span class="math display">\[
+\tag{2.2}\]</span></span> where <span class="math display">\[
 \begin{align}
 C_{n}^{ww}(\cdot) &amp; = \frac{1}{J-1} \sum_{j=1}^{J} \left( G(m_{n}^{(j)}) - \overline{w}_{n} \right) \left&lt; G(m_{n}^{(j)}) - \overline{w}_{n}, \cdot \right&gt;_{Y} \\
 C_{n}^{mw}(\cdot) &amp; = \frac{1}{J-1} \sum_{j=1}^{J} \left( m_{n}^{(j)} - \overline{m}_{n} \right) \left&lt; G(m_{n}^{(j)}) - \overline{w}_{n}, \cdot \right&gt;_{Y}
 \end{align}
 \]</span> are <strong>covariance operators</strong>, <span class="math inline">\(G(m_n^{(j)})\)</span> is the <strong>forward operator</strong> applied to the <span class="math inline">\(j\)</span>-th ensemble member at iteration <span class="math inline">\(n\)</span>, and <span class="math inline">\(\Gamma\)</span> is an operator that encodes the measurement precision.</p>
+<p>For constructing the inverse in <a href="#eq-kalmanupdate" class="quarto-xref"><span>2.2</span></a> we employ a <strong>low-rank approximation</strong> of <span class="math inline">\(C^{ww}_n\)</span> to compute the eigen decomposition of the operator.</p>
 
 
 </section>
